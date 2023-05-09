@@ -6,32 +6,42 @@ const Footer = () => {
         <footer className="osg-footer">
             <div className="osg-footer__gutter">
                 <div className="osg-footer__content">
-                <div className="osg-grid osg-grid--gap">
-                    <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-                    <h2 className="osg-text--size-india osg-text--size-hotel-breakpoint-medium osg-text--size-golf-breakpoint-large osg-text--weight-medium osg-margin-bottom-4">Heading 1</h2>
-                    <ul className="osg-unordered-list osg-unordered-list--clean">
-                        <li className="osg-unordered-list__item"><a href="javascript:void(0)" className="osg-link osg-link--chevron-right osg-link--state-light">Link text 1</a></li>
-                        <li className="osg-unordered-list__item"><a href="javascript:void(0)" className="osg-link osg-link--chevron-right osg-link--state-light">Link text 2 - long link text spanning multiple lines</a></li>
-                        <li className="osg-unordered-list__item"><a href="javascript:void(0)" className="osg-link osg-link--chevron-right osg-link--state-light">Link text 3</a></li>
-                    </ul>
+                    <div className="osg-grid osg-grid--gap">
+                        <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+                        <h2 className="osg-text--size-india osg-text--size-hotel-breakpoint-medium osg-text--size-golf-breakpoint-large osg-text--weight-medium osg-margin-bottom-4">Kontakt</h2>
+                        <ul className="osg-unordered-list osg-unordered-list--clean">
+                            <li className="osg-unordered-list__item"><a href="https://www.oslo.kommune.no/kontakt/" className="osg-link osg-link--chevron-right osg-link--state-light">Kontakt Oslo Kommune</a></li>
+                            <li className="osg-unordered-list__item"><a href="https://www.oslo.kommune.no/finn-en-ansatt/?searchID=ansatt" className="osg-link osg-link--chevron-right osg-link--state-light">Finn en ansatt</a></li>
+                        </ul>
+                        </div>
+                        <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+                        <h2 className="osg-text--size-india osg-text--size-hotel-breakpoint-medium osg-text--size-golf-breakpoint-large osg-text--weight-medium osg-margin-bottom-4">Jobb i Oslo Kommune</h2>
+                        <ul className="osg-unordered-list osg-unordered-list--clean">
+                            <li className="osg-unordered-list__item"><a href="https://candidate.webcruiter.com/nb-no/home/companyadverts?companylock=2180#search" className="osg-link osg-link--chevron-right osg-link--state-light">Ledige stillinger</a></li>
+                            <li className="osg-unordered-list__item"><a href="https://www.oslo.kommune.no/jobb-i-oslo-kommune/" className="osg-link osg-link--chevron-right osg-link--state-light">Lønn og arbeidsforhold</a></li>
+                        </ul>
+                        </div>
+                        <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+                        <h2 className="osg-text--size-india osg-text--size-hotel-breakpoint-medium osg-text--size-golf-breakpoint-large osg-text--weight-medium osg-margin-bottom-4">Om nettstedet</h2>
+                        <ul className="osg-unordered-list osg-unordered-list--clean">
+                            <li className="osg-unordered-list__item"><a href="https://www.oslo.kommune.no/personvern-og-informasjonskapsler/" className="osg-link osg-link--chevron-right osg-link--state-light">Personvern og informasjonskapsler</a></li>
+                            <li className="osg-unordered-list__item"><a href="https://www.oslo.kommune.no/tilgjengelighet/" className="osg-link osg-link--chevron-right osg-link--state-light">Tilgjengelighet</a></li>
+                        </ul>
+                        </div>
+                        <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium osg-grid__column--start-9-breakpoint-medium osg-grid__column--end-13-breakpoint-medium">
+                            <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
+                                <div className="osg-grid">
+                                    <div className="osg-grid__column--6">
+                                        <a className="osg-link osg-link--state-light io-text-preset-15" href="/english/" lang="en-GB">English</a>
+                                    </div>
+                                    <div className="osg-grid__column--6 osg-text--align-right">            
+                                        <a className="osg-link osg-link--state-light osg-link--no-decoration io-text-preset-10 osg-margin-left-5" href="https://www.facebook.com/Oslo/" target="_blank" rel="noopener"><span className="osg-icon osg-icon--facebook"></span><span className="osg-sr-only">Facebook</span></a>
+                                        <a className="osg-link osg-link--state-light osg-link--no-decoration io-text-preset-10 osg-margin-left-5" href="https://twitter.com/oslokommune" target="_blank" rel="noopener"><span className="osg-icon osg-icon--twitter"></span><span className="osg-sr-only">Twitter</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-                    <h2 className="osg-text--size-india osg-text--size-hotel-breakpoint-medium osg-text--size-golf-breakpoint-large osg-text--weight-medium osg-margin-bottom-4">Heading 2</h2>
-                    <ul className="osg-unordered-list osg-unordered-list--clean">
-                        <li className="osg-unordered-list__item"><a href="javascript:void(0)" className="osg-link osg-link--chevron-right osg-link--state-light">Link text 1</a></li>
-                        <li className="osg-unordered-list__item"><a href="javascript:void(0)" className="osg-link osg-link--chevron-right osg-link--state-light">Link text 2</a></li>
-                    </ul>
-                    </div>
-                    <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
-                    <h2 className="osg-text--size-india osg-text--size-hotel-breakpoint-medium osg-text--size-golf-breakpoint-large osg-text--weight-medium osg-margin-bottom-4">Heading 3 - Long heading spanning multiple lines</h2>
-                    <ul className="osg-unordered-list osg-unordered-list--clean">
-                        <li className="osg-unordered-list__item"><a href="javascript:void(0)" className="osg-link osg-link--chevron-right osg-link--state-light">Link text 1</a></li>
-                        <li className="osg-unordered-list__item"><a href="javascript:void(0)" className="osg-link osg-link--chevron-right osg-link--state-light">Link text 2</a></li>
-                    </ul>
-                    </div>
-                    <div className="osg-grid__column--12 osg-grid__column--8-breakpoint-medium">Adding multiple rows and columns give more options for content placement.</div>
-                    <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">SoMe links</div>
-                </div>
                 </div>
             </div>
         </footer>

@@ -13,7 +13,7 @@ function App() {
         <div className="osg-grid__column--12">
           <Header/> 
         </div>
-        <div className="osg-grid__column--12">
+        <div className="osg-grid__column--12 io-grid-theme-standard">
           <InputText/>
         </div>
         <div className="osg-grid__column--12" id='zone-offset'></div>

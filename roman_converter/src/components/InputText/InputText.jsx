@@ -4,8 +4,8 @@ import axios from 'axios'
 
 const InputText = () => {
 
-    const [inputValue, setInputValue] = useState('');
     const [romanNr,setRomanNr] = useState("")
+    const [inputValue, setInputValue] = useState('');
     const [convertedNr,setConvertedNr] = useState("")
 
   const handleInputChange = (event) => {
@@ -26,7 +26,7 @@ const InputText = () => {
         .catch(error => {
             console.log(error)
         });
-    },[]);
+    },[romanNr]);
 
     return(
         <>
@@ -39,7 +39,7 @@ const InputText = () => {
             <div className="osg-grid__column--12">
                 <button className="osg-button" onClick={handleClick}>Button text</button>
             </div>
-            {convertedNr}
+            {convertedNr.converted}
         </div>
         </>
     )
