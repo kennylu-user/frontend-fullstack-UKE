@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import LandingView from './Views/LandingView';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import InputText from "./components/InputText/InputText.jsx"
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="osg-grid">
+        <div className="osg-grid__column--12">
+          <Header/> 
+        </div>
+        <div className="osg-grid__column--12">
+          <InputText/>
+        </div>
+        <div className="osg-grid__column--12" id='zone-offset'></div>
+        <div className="osg-grid__column--12">
+          <Footer/>
+        </div>
+      </div>
+
+      </div>
   );
 }
 
