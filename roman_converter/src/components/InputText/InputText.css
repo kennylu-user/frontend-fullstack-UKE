@@ -1,3 +1,14 @@
 input{
     width:1px;
 }
+.logInfo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.modal-button{
+    position: absolute;
+    top: 87%;
+    left: 92%;
+}
