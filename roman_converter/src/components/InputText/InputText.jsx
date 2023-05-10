@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Modal from 'react-modal';
 import './InputText.css';
 import axios from 'axios';
+import PaginatedList from "../PaginatedList/PaginatedList.jsx";
 
 const InputText = () => {
 
@@ -28,6 +29,10 @@ const closeModal = () => {
   }
 
     const handleClick = () => {
+        if (inputValue == ""){
+            alert("Vennligst skriv inn et romertall")
+            return;
+        }
         setRomanNr(inputValue)
     }   
     useEffect(() => {
@@ -50,7 +55,7 @@ const closeModal = () => {
         axios.get('http://localhost:8080/api/v1/logs')
         .then(response => {
             console.log(response.data)
-            setLogs(response.data)
+            setLogs(response.data.reverse())
         })
         .catch(error => {
             console.log(error)
@@ -74,23 +79,27 @@ const closeModal = () => {
                 </div>
                 <div className="osg-grid__column--12 osg-grid__column--start-10-breakpoint-medium osg-grid__column--end-10-breakpoint-medium">
                     <div className=" osg-text--align-center">
-                        <button className="osg-button" onClick={handleClick}>Convert</button>
+                        <button className="osg-button" onClick={handleClick}>Konverter</button>
                     </div>
                 </div>
             </div>
-            <div className="osg-grid__column--5 osg-padding-3">
-                {convertedNr.converted}
-            </div>
-            <div className="osg-grid__column--5 osg-padding-3">
-                <button className="osg-button" onClick={openModal}>Log</button>
+            {convertedNr && (
+                <div className="osg-grid__column--5 osg-padding-3" id="convertedNrInfo">
+                    {convertedNr.converted}
+                </div>
+            )}
+            {!convertedNr && (
+                <div className="osg-grid__column--5 osg-padding-3"></div>
+            )}
+            <div className="osg-grid__column--5">
+                <button className="osg-button" onClick={openModal}>Historikk</button>
                 <Modal
+                id="modal"
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}>
-                    <div className="logInfo osg-padding-3">
-                        {logs.map((logObj) => (
-                            <div>{logObj.timeStamp}: {logObj.convertedNr}</div>
-                        ))}
+                    <div className="logInfo">
                         <div>
+                            <PaginatedList data={logs}/>
                         </div>
                     </div>
                     <button className="modal-button osg-button" onClick={closeModal}>Close</button>

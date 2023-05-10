@@ -9,14 +9,13 @@ import InputText from "./components/InputText/InputText.jsx"
 function App() {
   return (
     <div className="App">
-      <div className="osg-grid">
+      <div className="osg-grid osg-grid--gap">
         <div className="osg-grid__column--12">
           <Header/> 
         </div>
         <div className="osg-grid__column--12 io-grid-theme-standard">
           <InputText/>
         </div>
-        <div className="osg-grid__column--12" id='zone-offset'></div>
         <div className="osg-grid__column--12">
           <Footer/>
         </div>

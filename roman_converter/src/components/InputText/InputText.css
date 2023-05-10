@@ -1,14 +1,31 @@
-input{
-    width:1px;
-}
+
 .logInfo{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 300px;
+    height: 300px;
+      
+      
 }
 .modal-button{
     position: absolute;
     top: 87%;
     left: 92%;
+}
+#convertedNrInfo{
+    border: 1px solid black;
+}
+#modal{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    margin: 10px;
+    height: 70%;
+    overflow: scroll;
+    /* width: 50%; */
+    max-height: 500px; /* set the maximum height of the content */
+    overflow-y: scroll;
 }
