@@ -43,7 +43,7 @@ const Header = () =>{
                 <form className="osg-margin-right-2-breakpoint-medium osg-margin-right-8-breakpoint-large" action method="GET" role="search">
                     <div className="osg-search-circle">
                     <div className="osg-search-circle__wrapper">
-                        <input className="osg-search-circle__input" type="search" autocomplete="off" aria-label="Label text" placeholder="Search keyword"/>
+                        <input className="osg-search-circle__input" type="search" autoComplete="off" aria-label="Label text" placeholder="Search keyword"/>
                     </div>
                     <button className="osg-search-circle__button" type="submit">
                         <span className="osg-search-circle__button-icon"></span>

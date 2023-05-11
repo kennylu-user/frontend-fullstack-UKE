@@ -32,7 +32,7 @@ const Footer = () => {
                             <div className="osg-grid__column--12 osg-grid__column--4-breakpoint-medium">
                                 <div className="osg-grid">
                                     <div className="osg-grid__column--6">
-                                        <a className="osg-link osg-link--state-light io-text-preset-15" href="/english/" lang="en-GB">English</a>
+                                        <a className="osg-link osg-link--state-light io-text-preset-15" href="https://www.oslo.kommune.no/english/" lang="en-GB">English</a>
                                     </div>
                                     <div className="osg-grid__column--6 osg-text--align-right">            
                                         <a className="osg-link osg-link--state-light osg-link--no-decoration io-text-preset-10 osg-margin-left-5" href="https://www.facebook.com/Oslo/" target="_blank" rel="noopener"><span className="osg-icon osg-icon--facebook"></span><span className="osg-sr-only">Facebook</span></a>

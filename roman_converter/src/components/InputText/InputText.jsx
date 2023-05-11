@@ -4,6 +4,7 @@ import './InputText.css';
 import axios from 'axios';
 import PaginatedList from "../PaginatedList/PaginatedList.jsx";
 
+Modal.setAppElement('#root')
 const InputText = () => {
 
     const [romanNr,setRomanNr] = useState("")
@@ -12,21 +13,25 @@ const InputText = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [logs, setLogs] = useState([])
 
-const openModal = () => {
-    setModalIsOpen(true);
-}
+    const openModal = () => {
+        setModalIsOpen(true);
+    }
 
-const closeModal = () => {
-    setModalIsOpen(false);
-}
+    const closeModal = () => {
+        setModalIsOpen(false);
+    }
 
-  const handleInputChange = (event) => {
-    const romanNumeralRegex = /^M*(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/;
-    const newValue = event.target.value.toUpperCase();
-    if (romanNumeralRegex.test(newValue)) {
-        setInputValue(newValue);
-      }
-  }
+    const resetInput = () => {
+        setInputValue("");
+    }
+
+    const handleInputChange = (event) => {
+        const romanNumeralRegex = /^M*(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/;
+        const newValue = event.target.value.toUpperCase();
+        if (romanNumeralRegex.test(newValue)) {
+            setInputValue(newValue);
+        }
+    }
 
     const handleClick = () => {
         if (inputValue == ""){
@@ -34,6 +39,7 @@ const closeModal = () => {
             return;
         }
         setRomanNr(inputValue)
+        // setInputValue("")
     }   
     useEffect(() => {
         axios.get(`http://localhost:8080/api/v1/convertednr/${romanNr}`)
@@ -70,10 +76,11 @@ const closeModal = () => {
                     <div className="osg-input">
                         <input className="osg-input__input" 
                         type="text"
-                        placeholder="Input text" 
+                        placeholder="Romertall" 
                         pattern="^[IVXLCDM]+$"
                         value={inputValue} 
                         onChange={handleInputChange}
+                        onClick={resetInput}
                         />
                     </div>
                 </div>
@@ -91,7 +98,7 @@ const closeModal = () => {
             {!convertedNr && (
                 <div className="osg-grid__column--5 osg-padding-3"></div>
             )}
-            <div className="osg-grid__column--5">
+            <div className="osg-grid__column--3">
                 <button className="osg-button" onClick={openModal}>Historikk</button>
                 <Modal
                 id="modal"

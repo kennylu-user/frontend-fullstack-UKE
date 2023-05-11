@@ -14,6 +14,7 @@ function App() {
           <Header/> 
         </div>
         <div className="osg-grid__column--12 io-grid-theme-standard">
+      <h1>Romertall konverterer</h1>
           <InputText/>
         </div>
         <div className="osg-grid__column--12">
